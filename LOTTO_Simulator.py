@@ -2,6 +2,7 @@ import random
 
 
 def user():
+    """Create list with user numbers"""
     numbers = 0
     my_list = []
     while numbers < 6:
@@ -22,6 +23,7 @@ def user():
 
 
 def computer():
+    """Create computer numbers and compare"""
     user_list = user()
     com_numbers = 0
     com_list = []
@@ -46,7 +48,6 @@ def computer():
         print("Gratulacje, trafiłeś {compare} liczb!")
     elif compare == 6:
         print("Gratulacje, trafiłeś wszystkie liczby!")
-    # print(f"Trafiłeś {compare} liczby")
 
 
 computer()
