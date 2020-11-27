@@ -7,17 +7,17 @@ def user():
     my_list = []
     while numbers < 6:
         try:
-            user_num = int(input(f"Podaj {numbers+1} liczbę: "))
+            user_num = int(input(f"Please put {numbers+1} number: "))
             if user_num in range(1, 50):
                 if user_num not in my_list:
                     my_list.append(user_num)
                     numbers += 1
                 else:
-                    print("Liczba została już wybrana")
+                    print("Number is already taken")
             else:
-                print("Podaj liczbę z przedziału 1 - 49")
+                print("Please put number in range 1-49")
         except ValueError:
-            print("To nie jest liczba")
+            print("It is not integer")
     my_list.sort()
     return my_list
 
@@ -37,17 +37,17 @@ def computer():
     print(com_list)
     compare = len(set(user_list) & set(com_list))
     if compare == 0:
-        print(f"Niestety nie trafiłeś żadnej liczby")
+        print(f"Unfortunetly you did not guess any number")
     elif compare == 1:
-        print("Trafiłeś jedynie 1 liczbę")    
+        print("You guessed 1 number")    
     elif compare == 2:
-        print("Trafiłeś jedynie 2 liczby")    
+        print("You guessed 2 numbers")    
     elif compare == 3 or compare == 4:
-        print("Gratulacje, trafiłeś {compare} liczby!")
+        print("Congratulations! You guessed {compare} numbers!")
     elif compare == 5:
-        print("Gratulacje, trafiłeś {compare} liczb!")
+        print("Congratulations! You guessed {compare} numbers!")
     elif compare == 6:
-        print("Gratulacje, trafiłeś wszystkie liczby!")
+        print("Congratulations! You guessed all numbers!")
 
 
 computer()
